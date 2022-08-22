@@ -1,0 +1,6 @@
+@media (max-width:500px){
+    .cv{
+        display: flex;
+        justify-content: center;
+    }
+}

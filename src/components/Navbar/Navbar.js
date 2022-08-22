@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import logo from '../../assets/images/logo.png'
 import { FaBars, FaTimes, FaGithub, FaLinkedin, FaDiscord } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-scroll'
+
 
 
 const Navbar = () => {
@@ -14,26 +15,66 @@ const Navbar = () => {
   return (
     <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300'>
         <div>
-            <Link to='/'>
-                <img src={logo} alt='logo' style={{ width:'50px'}}></img>
+            <Link activeClass='active' to='home' smooth={true} duration={500}>
+                <img src={logo} alt='logo' style={{ width:'50px'}} className='cursor-pointer'></img>
             </Link>
         </div>  
             <ul className='hidden md:flex'>
-                <li>Home</li>
-                <li>About</li>
-                <li>Skills</li>
-                <li>Projects</li>
-                <li>Contact</li>
+                <li className='hover:text-[rgb(209,76,76)] active:text-[rgb(209,76,76)]'>
+                   <Link activeClass="active" to="home" smooth={true} duration={500}>
+                         Home
+                   </Link>
+                </li>
+                <li className='hover:text-[rgb(209,76,76)]'>
+                   <Link activeClass="active" to="about" smooth={true} duration={500}>
+                         About
+                   </Link>
+                </li>
+                <li className='hover:text-[rgb(209,76,76)]'>
+                    <Link activeClass="active" to="skills" smooth={true} duration={500}>
+                         Skills
+                   </Link>
+                </li>
+                <li className='hover:text-[rgb(209,76,76)]'>
+                    <Link activeClass="active" to="projects" smooth={true} duration={500}>
+                         Projects
+                   </Link>
+                </li>
+                <li className='hover:text-[rgb(209,76,76)]'>
+                <Link activeClass="active" to="contact" smooth={true} duration={500}>
+                         Contact
+                   </Link>
+                </li>
             </ul>
         <div className='md:hidden z-10' onClick={handleMenu}>
             {!menu ? <FaBars className='hover:text-[rgb(209,76,76)] text-2xl'/> : <FaTimes className='hover:text-[rgb(209,76,76)] text-2xl'/>}
         </div>
         <ul className={!menu ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'}>
-                 <li className='py-6 text-4xl hover:text-[rgb(209,76,76)] font-bold'>Home</li>
-                <li className='py-6 text-4xl hover:text-[rgb(209,76,76)] font-bold'>About</li>
-                <li className='py-6 text-4xl hover:text-[rgb(209,76,76)] font-bold'>Skills</li>
-                <li className='py-6 text-4xl hover:text-[rgb(209,76,76)] font-bold'>Projects</li>
-                <li className='py-6 text-4xl hover:text-[rgb(209,76,76)] font-bold'>Contact</li>
+                 <li className='py-6 text-4xl hover:text-[rgb(209,76,76)] font-bold'>
+                 <Link activeClass="active" to="home" smooth={true} duration={500} onClick={handleMenu}>
+                         Home
+                   </Link>
+                 </li>
+                <li className='py-6 text-4xl hover:text-[rgb(209,76,76)] font-bold'>
+                <Link activeClass="active" to="about" smooth={true} duration={500} onClick={handleMenu}>
+                         About
+                   </Link>
+                </li>
+                <li className='py-6 text-4xl hover:text-[rgb(209,76,76)] font-bold'>
+                <Link activeClass="active" to="skills" smooth={true} duration={500} onClick={handleMenu}>
+                         Skills
+                   </Link>
+                </li>
+                <li className='py-6 text-4xl hover:text-[rgb(209,76,76)] font-bold'>
+                <Link activeClass="active" to="projects" smooth={true} duration={500} onClick={handleMenu}>
+                         Projects
+                   </Link>
+                </li>
+                <li className='py-6 text-4xl hover:text-[rgb(209,76,76)] font-bold' onClick={handleMenu}>
+                <Link activeClass="active" to="contact" smooth={true} duration={500}>
+                         Contact
+                   </Link>
+                </li>
         </ul>
         <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
             <ul>

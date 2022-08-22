@@ -1,4 +1,5 @@
 import React from 'react'
+import './index.css'
 
 const About = () => {
   return (
@@ -17,8 +18,9 @@ const About = () => {
                     awesome projects.</p>
                     </div>
                     <div className='text-xl'>
-                        <p>Always eager to learn more, whether is getting better at
+                        <p className='my-4'>Always eager to learn more, whether is getting better at
                     the technologies I work with or learning new ones. Sports enjoyer, love to work out and go jogging.</p>
+                    <a href='https://docs.google.com/document/d/14FCAxcNo71baaozqb5JiNUplO8Azmr6xOwgMTVbG5YE/edit?usp=sharing' target='_blank' rel='noreferrer' className='border-[1px] border-[rgb(209,76,76)] text-2xl font-bold py-2 px-4 text-[rgb(209,76,76)] hover:bg-[rgb(209,76,76)] hover:text-white cv'>Check out my CV!</a>
                     </div>
                 </div>
         </div>
