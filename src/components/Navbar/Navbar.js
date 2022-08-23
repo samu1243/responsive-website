@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import logo from '../../assets/images/logo.png'
 import { FaBars, FaTimes, FaGithub, FaLinkedin, FaDiscord } from 'react-icons/fa'
 import { Link } from 'react-scroll'
+import './index.css'
 
 
 
@@ -19,30 +20,30 @@ const Navbar = () => {
             <Link activeClass='active' to='home' smooth={true} duration={500}>
                 <img src={logo} alt='logo' style={{ width:'50px'}} className='cursor-pointer'></img>
             </Link>
-        </div>  
+        </div>        
             <ul className='hidden md:flex'>
-                <li className='hover:text-[rgb(209,76,76)] active:text-[rgb(209,76,76)]'>
-                   <Link activeClass="active" to="home" smooth={true} duration={500}>
+                <li className='hover:text-[rgb(209,76,76)]'>
+                   <Link activeClass="active" to="home" smooth={true} duration={500} spy={true}>
                          Home
                    </Link>
                 </li>
                 <li className='hover:text-[rgb(209,76,76)]'>
-                   <Link activeClass="active" to="about" smooth={true} duration={500}>
+                   <Link activeClass="active" to="about" smooth={true} duration={500} spy={true}>
                          About
                    </Link>
                 </li>
                 <li className='hover:text-[rgb(209,76,76)]'>
-                    <Link activeClass="active" to="skills" smooth={true} duration={500}>
+                    <Link activeClass="active" to="skills" smooth={true} duration={500} spy={true}>
                          Skills
                    </Link>
                 </li>
                 <li className='hover:text-[rgb(209,76,76)]'>
-                    <Link activeClass="active" to="projects" smooth={true} duration={500}>
+                    <Link activeClass="active" to="projects" smooth={true} duration={500} spy={true}>
                          Projects
                    </Link>
                 </li>
                 <li className='hover:text-[rgb(209,76,76)]'>
-                <Link activeClass="active" to="contact" smooth={true} duration={500}>
+                <Link activeClass="active" to="contact" smooth={true} duration={500} spy={true}>
                          Contact
                    </Link>
                 </li>
@@ -67,12 +68,12 @@ const Navbar = () => {
                    </Link>
                 </li>
                 <li className='py-6 text-4xl hover:text-[rgb(209,76,76)] font-bold'>
-                <Link activeClass="active" to="projects" smooth={true} duration={500} onClick={handleMenu}>
+                <Link activeClass="active" to="projects" smooth={true} duration={500} onClick={handleMenu} offset={-100}>
                          Projects
                    </Link>
                 </li>
                 <li className='py-6 text-4xl hover:text-[rgb(209,76,76)] font-bold'>
-                <Link activeClass="active" to="contact" smooth={true} duration={500} onClick={handleMenu}>
+                <Link activeClass="active" to="contact" smooth={true} duration={500} onClick={handleMenu} offset={-40}>
                          Contact
                    </Link>
                 </li>

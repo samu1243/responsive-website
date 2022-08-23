@@ -12,7 +12,7 @@ export const Home = () => {
             <h2 className='text-4xl sm:text-7xl font-bold text-[rgb(201,125,125)]'>Full Stack Developer</h2>
             <p className='text-[#ccd6f6] text-xl font-semibold py-4 max-w-[650px]'>Highly interested in large projects. Currently having fun designing cool websites. Feel free to check out my page. Also, please do contact me with any questions you may have!</p>
             <div>
-                <Link to='contact' duration={500} smooth={true} className='button text-[rgb(209,76,76)] border-[1px] font-semibold border-[rgb(209,76,76)] px-4 py-2 hover:bg-[rgb(209,76,76)] hover:text-[#ccd6f6] my-2'>Contact me</Link>
+                <Link to='contact' duration={500} smooth={true} className='button text-[rgb(209,76,76)] border-[1px] font-semibold border-[rgb(209,76,76)] px-4 py-2 hover:bg-[rgb(209,76,76)] hover:text-[#ccd6f6] my-2 cursor-pointer'>Contact me</Link>
             </div>
         </div>
     </div>
