@@ -7,6 +7,7 @@ import { Link } from 'react-scroll'
 
 const Navbar = () => {
     const [menu, setMenu] = useState(false)
+
     const handleMenu = () =>{
         setMenu(!menu)
     }
@@ -70,10 +71,15 @@ const Navbar = () => {
                          Projects
                    </Link>
                 </li>
-                <li className='py-6 text-4xl hover:text-[rgb(209,76,76)] font-bold' onClick={handleMenu}>
-                <Link activeClass="active" to="contact" smooth={true} duration={500}>
+                <li className='py-6 text-4xl hover:text-[rgb(209,76,76)] font-bold'>
+                <Link activeClass="active" to="contact" smooth={true} duration={500} onClick={handleMenu}>
                          Contact
                    </Link>
+                </li>
+                <li className='py-10 text-4xl font-bold flex'> 
+                    <a className='hover:text-[rgb(209,76,76)] px-4' rel='noreferrer' target='_blank' href='https://www.linkedin.com/in/samuel-djekki/'><FaLinkedin/></a>
+                    <a className='hover:text-[rgb(209,76,76)] px-4' rel='noreferrer' target='_blank' href='https://github.com/samu1243'> <FaGithub/> </a>
+                    <a className='hover:text-[rgb(209,76,76)] px-4' rel='noreferrer' target='_blank' href='https://discord.com/users/258830033026547713'> <FaDiscord/> </a>
                 </li>
         </ul>
         <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
