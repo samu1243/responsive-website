@@ -12,7 +12,7 @@ const Projects = () => {
                 <p className='text-4xl font-bold inline border-b-4 border-[rgb(209,76,76)]'>Projects</p>
                 <p className='py-6 font-semibold'>These are some of the projects that I've done</p>
             </div>
-            <div className='grid sm:grid-cols-1 md:grid-cols-3 gap-4'>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
                 <div style={{backgroundImage: `url(${apiBlog})`}} className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
                     <div className='opacity-0 group-hover:opacity-100 duration-300 text-center'>
                         <span className='text-2xl font-bold text-white tracking-wider '>
